@@ -110,3 +110,4 @@ HOW TO USE:
 
 3.- Add this line in the config.xml inside the <plugins> tag <plugin name="GameCenterPlugin" value="GameCenterPlugin" />
 
+4.- Drag the GameCenterPlugin.js into your www folder and link it on your index.html
