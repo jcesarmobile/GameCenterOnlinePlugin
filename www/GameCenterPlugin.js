@@ -5,7 +5,6 @@
  this.receivedMove = null;
  this.receivedTurn = null;
  this.matchEnded = null;
- this.myTurn = -1;
  
  }
  

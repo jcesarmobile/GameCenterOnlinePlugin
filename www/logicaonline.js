@@ -43,8 +43,6 @@ function onDeviceReady() {
         $("#status").text("Search Failed, Press Start button");
         
     }
- 
-    window.gameCenter.receiveData = function(data) { console.log(data);};
     
     window.gameCenter.receivedTurn = function(data) {
         
