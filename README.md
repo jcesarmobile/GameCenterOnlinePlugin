@@ -17,21 +17,30 @@ It's a recommended read before start using the pluging
 DOCUMENTATION:
 
 authenticate to Game Center
+
 window.gameCenter.authenticate( successCallback, failureCallback );
 
+
 start searching a new game
+
 window.gameCenter.startGame( successCallback, failureCallback );
 
+
 send move
+
 window.gameCenter.sendMove( successCallback, failureCallback, x,y ); //x and y are the board coordinates.
 
+
 Events
+
 The user cancel the new game search (dissmiss the game center screen)
+
 window.gameCenter.onSearchCancelled = function() {
 //Do somethig
 }
 
 The search fails
+
 window.gameCenter.onSearchFailed = function() {       
   //Do something      
 }
@@ -41,17 +50,20 @@ It can be 1 or 2.
 It is only received once, you have to store it and consider it for turn based games. 
 The plugin doesn't handle turns, but it knows which player sent the move.
 The player turn is assigned randomly
+
 window.gameCenter.receivedTurn = function(data) {
 // do something with the turn (data) with values 1 or 2       
 }
 
 Game received the other player move
+
 window.gameCenter.receivedMove = function(i,j) {
 //i and j are the coordinates of the other player move, do something with them
 }
 
 Game received the player names
 name 1 is the name for the player with turn 1, name 2 is the name for the player with turn 2
+
 window.gameCenter.receivedGamerNames = function(name1, name2) {
   //show the names somewhere if you want.      
 }
@@ -60,8 +72,9 @@ Game ended for technical problems:
 One of the player lost the game center connection
 The game couldn't connect with the other player
 The game failed to send data to the other player
+
 window.gameCenter.matchEnded = function () {
-   //Do something when one of the above problems happended     
+   //Do something when one of the above problems happened     
 }
 
 
