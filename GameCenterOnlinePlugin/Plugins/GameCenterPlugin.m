@@ -28,13 +28,27 @@
     }];
 }
 
-
 - (void)startGame:(CDVInvokedUrlCommand*)command
 {
     
     CDVPluginResult* pluginResult = nil;
     [self inicializar];
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    
+}
+
+- (void)getLocalPlayerId:(CDVInvokedUrlCommand*)command
+{
+    
+    CDVPluginResult* pluginResult = nil;
+    GKPlayer * localPlayer = [GKLocalPlayer localPlayer];
+    if ([GKLocalPlayer localPlayer].authenticated) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:localPlayer.playerID];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    }
+    
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     
 }
@@ -223,31 +237,27 @@
 }
 
 -(void)searchFailed {
+    
     NSString * javascriptString = @"window.gameCenter._searchFailed();";
     [self.webView stringByEvaluatingJavaScriptFromString:javascriptString];
+    
 }
 
 -(void)sendGamerNames:(NSString *)playerID {
     
     NSString * javascriptString;
-    NSArray * arrayJugadores;
     GKPlayer *player = [[GCHelper sharedInstance].playersDict objectForKey:playerID];
+
     if (isPlayer1) {
         
-        
-        
         javascriptString = [NSString stringWithFormat:@"window.gameCenter._receivedGamerNames('%@','%@');",[GKLocalPlayer localPlayer].alias,player.alias];
-        arrayJugadores = @[[GKLocalPlayer localPlayer].alias,player.alias];
-        
-        
         
     } else {
         
         javascriptString = [NSString stringWithFormat:@"window.gameCenter._receivedGamerNames('%@','%@');",player.alias,[GKLocalPlayer localPlayer].alias];
-        arrayJugadores = @[player.alias,[GKLocalPlayer localPlayer].alias];
+        
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"nombresJugadores"
-                                                        object:arrayJugadores];
+    
     [self.webView stringByEvaluatingJavaScriptFromString:javascriptString];
 }
 

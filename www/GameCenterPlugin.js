@@ -15,6 +15,9 @@
  startGame: function (success, fail) {
   cordova.exec( success, fail, "GameCenterPlugin", "startGame", []);
  },
+ getLocalPlayerId: function (success, fail) {
+ cordova.exec( success, fail, "GameCenterPlugin", "getLocalPlayerId", []);
+ },
  sendMove: function (success, fail, i,j) {
   cordova.exec( success, fail, "GameCenterPlugin", "sendMove", [i,j]);
  },

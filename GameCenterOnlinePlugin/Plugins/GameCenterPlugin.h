@@ -67,6 +67,7 @@ typedef struct {
 
 - (void)authenticateLocalPlayer:(CDVInvokedUrlCommand*)command;
 - (void)startGame:(CDVInvokedUrlCommand*)command;
+- (void)getLocalPlayerId:(CDVInvokedUrlCommand*)command;
 - (void)sendMove:(CDVInvokedUrlCommand*)command;
 
 
