@@ -4,8 +4,7 @@ GameCenterOnlinePlugin
 First of all a bit of self promotion.
 
 I created the Game Center Online plugin because I wanted to add online game to mi phonegap game, Othello Classic (http://goo.gl/hCJjC)
-
-If you want to see the plugin in action or want to support me please download the game.
+If you want to see the plugin in action or want to support the game and/or the plugin please download the game.
 
 The plugin isn't exactly the same I used on Othello Classic because my game is done with Cleaver, I had to make some changes and add new code for the plugin so everyone can use it.
 
