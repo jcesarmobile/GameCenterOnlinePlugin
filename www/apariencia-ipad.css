@@ -1,0 +1,106 @@
+#board{
+
+	margin:5px auto;
+	width:736px;
+    
+}
+
+.casilla {
+
+	width:90px;
+	height:90px;
+	float:left;
+	border:solid 1px black;
+	
+}
+	
+.darkGreen {
+	background-color:#009900;
+}
+		
+.lightGreen {
+	background-color:#33FF00;
+}
+
+.fila {
+
+	width:100%;
+	height:92px;
+	float:none;
+	margin:0 auto;
+	padding:0;
+
+}
+	
+.boton {
+	
+	margin-left: 220px;
+	width:160px;
+
+
+}
+
+
+.white{
+	width:88px;
+	height:88px;
+	background-color:white;
+	-webkit-border-radius: 44px;
+    background-image: -webkit-radial-gradient(center center , ellipse farthest-corner, rgba(246, 248, 249, 0.5) 44%, rgba(237, 237, 237, 0.5) 58%, rgba(206, 206, 206, 0.5) 62%, rgba(245, 247, 249, 0.5) 100%);
+	
+}
+.black{
+	width:88px;
+	height:88px;
+	background-color:black;
+	-webkit-border-radius: 44px;
+    background-image: -webkit-radial-gradient(center center , ellipse farthest-corner, rgba(49, 49, 49, 0.5) 44%, rgba(57, 57, 57, 0.5) 58%, rgba(86, 86, 86, 0.5) 62%, rgba(65, 67, 69, 0.5) 100%);
+}
+
+
+#player1 {
+	float:left;
+	font-size:35px;
+	width:350px;
+}
+
+
+#player2 {
+	float:right;
+    text-align:right;
+	font-size:35px;
+	width:350px;
+    
+}
+
+
+#marcadores {
+    margin:20px auto 0 auto;
+    height:150px;
+    width:736px;
+    color:black;
+    
+}
+
+#your_color {
+    width:100%;
+    text-align:center;
+    font-size:45px;
+}
+
+#status {
+    width:100%;
+    text-align:center;
+    font-size:45px;
+}
+
+#button_center{
+    text-align:center;
+}
+
+#start_button {
+
+    width:150px;
+    height:50px;
+    
+}
