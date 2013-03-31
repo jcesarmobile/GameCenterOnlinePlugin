@@ -1,7 +1,8 @@
 GameCenterOnlinePlugin
 ======================
 
-First of all a bit of self promotion. I created the Game Center Online plugin because I wanted to add online game to mi phonegap game, Othello Classic (http://goo.gl/hCJjC)
+First of all a bit of self promotion. 
+I created the Game Center Online plugin because I wanted to add online game to mi phonegap game, Othello Classic (http://goo.gl/hCJjC)
 If you want to see the plugin in action or want to support me please download the game.
 The plugin isn't exactly the same I used on Othello Classic because my game is done with Cleaver, I had to make some changes and add new code for the plugin so everyone can use it.
 
@@ -66,7 +67,10 @@ window.gameCenter.matchEnded = function () {
 
 HOW TO USE:
 
+
 1.- Add GameKit framework to your xcode project
+
 2.- Drag GameCenterPlugin.h, GameCenterPlugin.m, GCHelper.h and GCHelper.m to your xcode project
+
 3.- Add this line in the config.xml inside the <plugins> tag <plugin name="GameCenterPlugin" value="GameCenterPlugin" />
 
