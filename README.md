@@ -1,6 +1,8 @@
 GameCenterOnlinePlugin
 ======================
 
+This plugin is deprecated, use this instead https://github.com/jcesarmobile/GameCenterMatchPlugin
+
 First of all a bit of self promotion.
 
 I created the Game Center Online plugin because I wanted to add online game to mi phonegap game, Othello Classic (http://goo.gl/hCJjC)
