@@ -5,12 +5,12 @@ This plugin is deprecated, use this instead https://github.com/jcesarmobile/Game
 
 First of all a bit of self promotion.
 
-I created the Game Center Online plugin because I wanted to add online game to mi phonegap game, Othello Classic (http://goo.gl/hCJjC)
+I created the Game Center Online plugin because I wanted to add online game to my phonegap game, Othello Classic (http://goo.gl/hCJjC)
 If you want to see the plugin in action or want to support the game and/or the plugin please download the game.
 
-The plugin isn't exactly the same I used on Othello Classic because my game is done with Cleaver, I had to make some changes and add new code for the plugin so everyone can use it.
+The plugin isn't exactly the same as the one I used on Othello Classic because my game is done with Cleaver, I had to make some changes and add new code for the plugin so everyone can use it.
 
-The plugin is a bit limited right now, it just do what I needed for Othello Classic, so right now it only can be used in 2 player games and only can send/receive 2 ints (board coordinates for example)
+The plugin is a bit limited right now, it just does what I needed for Othello Classic, so right now it only can be used in 2 player games and only can send/receive 2 ints (board coordinates for example)
 
 I have uploaded a full working sample game with almost no logic, where there are 2 players and they just put a disk in their turn. Nobody wins, nobody loses.
 
@@ -38,7 +38,7 @@ window.gameCenter.sendMove( successCallback, failureCallback, x,y ); //x and y a
 
 Events
 
-The user cancel the new game search (dissmiss the game center screen)
+The user cancels the new game search (dismiss the game center screen)
 
 window.gameCenter.onSearchCancelled = function() {
 
@@ -54,7 +54,7 @@ window.gameCenter.onSearchFailed = function() {
   
 }
 
-The game receive the player's turn.
+The game receives the player's turn.
 
 It can be 1 or 2.
 
@@ -70,15 +70,15 @@ window.gameCenter.receivedTurn = function(data) {
 
 }
 
-Game received the other player move
+Game received the other player's move
 
 window.gameCenter.receivedMove = function(i,j) {
 
-//i and j are the coordinates of the other player move, do something with them
+//i and j are the coordinates of the other player's move, do something with them
 
 }
 
-Game received the player names
+Game received the players' names
 name 1 is the name for the player with turn 1, name 2 is the name for the player with turn 2
 
 window.gameCenter.receivedGamerNames = function(name1, name2) {
@@ -89,7 +89,7 @@ window.gameCenter.receivedGamerNames = function(name1, name2) {
 
 Game ended for technical problems:
 
-One of the player lost the game center connection
+One of the players lost the game center connection
 
 The game couldn't connect with the other player
 
